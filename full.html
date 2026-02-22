@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style >
+    	<link rel="stylesheet" href=full .css">
+    </style>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <!-- Semantic Tags -->
+<header>Header Content</header>
+<nav>Navigation Links</nav>
+<main>Main Content</main>
+<article>Article Content</article>
+<section>Section Content</section>
+<aside>Sidebar Content</aside>
+<footer>Footer Content</footer>
+
+<!-- Text Tags -->
+<h1>Heading 1</h1>
+<p>Paragraph text</p>
+<strong>Bold text</strong>
+<em>Italic text</em>
+<br> <!-- Line break -->
+<hr> <!-- Horizontal rule -->
+
+<img src="image.jpg" alt="Description" width="300" height="200">
+<a href="https://example.com" target="_blank" title="Link Title">Click Here</a>
+<input type="text" id="username" name="username" placeholder="Enter name" required>
+<div class="container" id="main" data-value="custom">Content</div>
+
+<!-- Flexbox Layout -->
+<div style="display: flex; justify-content: space-between;">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+</div>
+
+<!-- Grid Layout -->
+<div style="display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 10px;">
+    <div>Sidebar Left</div>
+    <div>Main Content</div>
+    <div>Sidebar Right</div>
+</div>
+
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" fill="blue"/>
+    <rect x="10" y="10" width="80" height="80" fill="red"/>
+</svg>
+<img src="graphic.png" alt="Graphic">
+
+<form action="/submit" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+    
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    
+    <input type="checkbox" id="agree" name="agree">
+    <label for="agree">I agree to terms</label>
+    
+    <button type="submit">Submit</button>
+</form>
+
+<!-- Images -->
+<img src="image.jpg" alt="Description">
+
+<!-- Audio -->
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+</audio>
+
+<!-- Video -->
+<video width="320" height="240" controls>
+    <source src="movie.mp4" type="video/mp4">
+    Your browser does not support video.
+</video>
+
+<!-- Special Characters -->
+&nbsp;   <!-- Non-breaking space -->
+&lt;     <!-- Less than (<) -->
+&gt;     <!-- Greater than (>) -->
+&amp;    <!-- Ampersand (&) -->
+&quot;   <!-- Double quote (") -->
+&copy;   <!-- Copyright (©) -->
+&reg;    <!-- Registered (®) -->
+&euro;   <!-- Euro (€) -->
+
+<button onclick="handleClick()">Click Me</button>
+<input type="text" onchange="handleChange(this.value)">
+<div onmouseover="handleHover()" onmouseout="handleLeave()">Hover Me</div>
+<form onsubmit="handleSubmit(event)">
+    <input type="text">
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function handleClick() { console.log('Clicked'); }
+    function handleChange(value) { console.log(value); }
+    function handleHover() { console.log('Hovering'); }
+    function handleLeave() { console.log('Left'); }
+    function handleSubmit(event) { event.preventDefault(); }
+</script>
+
+<script>
+    // Fetch API
+    fetch('https://api.example.com/data')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+
+    // LocalStorage API
+    localStorage.setItem('key', 'value');
+    const value = localStorage.getItem('key');
+    localStorage.removeItem('key');
+
+    // Geolocation API
+    navigator.geolocation.getCurrentPosition(position => {
+        console.log(position.coords.latitude);
+    });
+
+    // Notification API
+    Notification.requestPermission().then(permission => {
+        new Notification('Title', { body: 'Message' });
+    });
+</script>
+
+<canvas id="myCanvas" width="400" height="300"></canvas>
+
+<script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Draw rectangle
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(10, 10, 100, 100);
+    
+    // Draw circle
+    ctx.beginPath();
+    ctx.arc(200, 150, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = 'red';
+    ctx.fill();
+    
+    // Draw line
+    ctx.strokeStyle = 'green';
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(400, 300);
+    ctx.stroke();
+</script>
+
+
+<article>
+    <header>
+        <h1>Article Title</h1>
+        <time datetime="2026-02-22">February 22, 2026</time>
+    </header>
+    <section>
+        <p>Article content here...</p>
+    </section>
+    <footer>
+        <p>By Author Name</p>
+    </footer>
+</article>
+
+<figure>
+    <img src="image.jpg" alt="Description">
+    <figcaption>Image caption</figcaption>
+</figure>
+
+</body>
+</html>
